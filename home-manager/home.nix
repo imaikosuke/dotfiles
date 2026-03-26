@@ -18,7 +18,11 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    bat
+    fzf
     git
+    ghq
+    tree
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -41,6 +45,7 @@
   # plain files is through 'home.file'.
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
+    ".config/starship.toml".source = ./starship/starship.toml;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -75,6 +80,16 @@
 
   programs.zsh = {
     enable = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   # Let Home Manager install and manage itself.

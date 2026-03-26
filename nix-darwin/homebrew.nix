@@ -28,8 +28,6 @@
       "cursor"
     ];
 
-    brews = [
-      "tree"
-    ];
+    brews = [ ];
   };
 }
