@@ -7,4 +7,3 @@
 	root = ~/ghq
 [alias]
 	branch = !git --no-pager branch
-
