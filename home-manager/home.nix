@@ -46,6 +46,8 @@
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
     ".config/starship.toml".source = ./starship/starship.toml;
+    ".config/zsh/.zshrc".source = ./zsh/.zshrc;
+    ".config/zsh/sghq.zsh".source = ./zsh/sghq.zsh;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -80,6 +82,9 @@
 
   programs.zsh = {
     enable = true;
+    initContent = ''
+      source ~/.config/zsh/.zshrc
+    '';
   };
 
   programs.fzf = {
