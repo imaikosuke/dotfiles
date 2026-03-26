@@ -6,6 +6,7 @@
   users.users."imai".home = "/Users/imai";
   imports = [
     ./home_manager.nix
+    ./homebrew.nix
   ];
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 6;
