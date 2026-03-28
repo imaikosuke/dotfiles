@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, username, ... }:
 
 {
-  imports = [ ./cursor/cursor.nix ];
+  imports = [
+    ./cursor/cursor.nix
+  ];
 
-  home.username = "imai";
-  home.homeDirectory = "/Users/imai";
+  home.username = username;
+  home.homeDirectory = "/Users/${username}";
 
   # Do not change this value after initial setup.
   home.stateVersion = "25.11";
@@ -12,7 +14,6 @@
   # CLI tools managed by Nix.
   home.packages = with pkgs; [
     bat
-    fzf
     git
     ghq
     tree
@@ -23,34 +24,34 @@
   home.file = {
     ".gitconfig".source = ./git/.gitconfig;
     ".config/starship.toml".source = ./starship/starship.toml;
-    ".config/zsh/.zshrc".source = ./zsh/.zshrc;
-    ".config/zsh/aliases.zsh".source = ./zsh/aliases.zsh;
-    ".config/zsh/sghq.zsh".source = ./zsh/sghq.zsh;
-    ".config/zsh/chpwd.zsh".source = ./zsh/chpwd.zsh;
+    ".config/zsh" = {
+      source = ./zsh;
+      recursive = true;
+    };
     ".config/ghostty/config".source = ./ghostty/config;
     ".config/ghostty/banner.txt".source = ./ghostty/banner.txt;
   };
 
-  home.sessionVariables = {};
+  programs = {
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      initContent = ''
+        source ~/.config/zsh/.zshrc
+      '';
+    };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    initContent = ''
-      source ~/.config/zsh/.zshrc
-    '';
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    home-manager.enable = true;
   };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.home-manager.enable = true;
 }
