@@ -23,10 +23,15 @@
       nix-homebrew,
       ...
     }:
+    let
+      username = "imai";
+      hostname = "MacBook";
+      system = "aarch64-darwin";
+    in
     {
-      darwinConfigurations."MacBook" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
         specialArgs = {
-          inherit self nix-homebrew;
+          inherit self nix-homebrew username hostname system;
         };
         modules = [
           ./nix-darwin/configuration.nix

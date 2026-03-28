@@ -1,5 +1,9 @@
+{ username, ... }:
 {
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users."imai" = ../home-manager/home.nix;
+  home-manager.extraSpecialArgs = {
+    inherit username;
+  };
+  home-manager.users.${username} = ../home-manager/home.nix;
 }

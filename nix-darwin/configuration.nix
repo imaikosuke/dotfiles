@@ -1,14 +1,16 @@
 {
   self,
+  username,
+  system,
   ...
 }:
 {
-  users.users."imai".home = "/Users/imai";
+  users.users.${username}.home = "/Users/${username}";
   imports = [
     ./home_manager.nix
     ./homebrew.nix
   ];
-  nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.hostPlatform = system;
   system.stateVersion = 6;
   nix.enable = false;
   security.pam.services.sudo_local.touchIdAuth = true;

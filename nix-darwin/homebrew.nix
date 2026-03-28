@@ -1,17 +1,18 @@
 {
   nix-homebrew,
+  username,
   ...
 }:
 {
   nix-homebrew = {
     enable = true;
-    user = "imai";
+    user = username;
     enableRosetta = false;
   };
 
   homebrew = {
     enable = true;
-    user = "imai";
+    user = username;
     onActivation = {
       upgrade = true;
       autoUpdate = false;
