@@ -5,7 +5,6 @@ alias .....='cd ../../../..'
 
 alias ll='ls -laG'
 
-alias gst='git status'
 alias gaa='git add'
 alias gcm='git commit -m'
 alias gs='git status'
