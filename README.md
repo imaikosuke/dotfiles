@@ -104,14 +104,20 @@ Astro, Auto Rename Tag, ESLint, GitHub Actions, GitLens, Markdown All in One, MD
 
 ## 初期セットアップ
 
-### 1. リポジトリをクローンする
+### 1. Nix をインストールする
 
 ```bash
-ghq get git@github.com:imaikosuke/dotfiles.git
-cd ~/ghq/github.com/imaikosuke/dotfiles
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 ```
 
-### 2. 設定を反映する
+### 2. リポジトリをクローンする
+
+```bash
+git clone git@github.com:imaikosuke/dotfiles.git ~/ghq/github.com/imai/dotfiles
+cd ~/ghq/github.com/imai/dotfiles
+```
+
+### 3. 設定を反映する
 
 ```bash
 sudo darwin-rebuild switch --flake .#imaikosuke
@@ -119,7 +125,7 @@ sudo darwin-rebuild switch --flake .#imaikosuke
 
 これにより nix-darwin、Home Manager、Homebrew の設定がまとめて反映されます。
 
-### 3. 日常の運用
+### 4. 日常の運用
 
 ```bash
 # 設定変更を反映
