@@ -119,8 +119,8 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 ### 2. Clone the repository
 
 ```bash
-git clone git@github.com:imaikosuke/dotfiles.git ~/ghq/github.com/imai/dotfiles
-cd ~/ghq/github.com/imai/dotfiles
+git clone git@github.com:imaikosuke/dotfiles.git ~/ghq/github.com/imaikosuke/dotfiles
+cd ~/ghq/github.com/imaikosuke/dotfiles
 ```
 
 ### 3. Apply the configuration
