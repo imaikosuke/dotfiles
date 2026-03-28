@@ -26,6 +26,7 @@
       "ghostty"
       "raycast"
       "cursor"
+      "font-jetbrains-mono-nerd-font"
     ];
 
     brews = [ ];
