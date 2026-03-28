@@ -25,7 +25,7 @@
     }:
     let
       username = "imai";
-      hostname = "MacBook";
+      hostname = "imaikosuke";
       system = "aarch64-darwin";
     in
     {

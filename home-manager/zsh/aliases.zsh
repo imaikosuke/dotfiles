@@ -11,5 +11,5 @@ alias gs='git status'
 alias gsb='git switch'
 alias gb='git branch'
 
-alias drs='darwin-rebuild switch --flake .#MacBook'
+alias drs='sudo darwin-rebuild switch --flake .#imaikosuke'
 alias nf='nix flake check'
