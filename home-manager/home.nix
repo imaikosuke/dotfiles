@@ -52,6 +52,7 @@
     ".config/zsh/sghq.zsh".source = ./zsh/sghq.zsh;
     ".config/zsh/chpwd.zsh".source = ./zsh/chpwd.zsh;
     ".config/ghostty/config".source = ./ghostty/config;
+    ".config/ghostty/banner.txt".source = ./ghostty/banner.txt;
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
