@@ -90,6 +90,7 @@ Homebrew is managed declaratively — packages removed from the config are autom
 |---------|--------------|
 | zsh | Completions, autosuggestions, loads `~/.config/zsh/.zshrc` |
 | fzf | zsh integration enabled |
+| mise | zsh integration enabled, manages project-local runtime and tool versions |
 | starship | zsh integration enabled, customized via `starship.toml` |
 
 **dotfiles (symlinked via `home.file`)**
