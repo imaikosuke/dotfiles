@@ -10,6 +10,7 @@
     ./home_manager.nix
     ./homebrew.nix
   ];
+  nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = system;
   system.stateVersion = 6;
   nix.enable = false;

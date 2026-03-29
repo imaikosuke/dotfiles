@@ -14,6 +14,7 @@
   # CLI tools managed by Nix.
   home.packages = with pkgs; [
     bat
+    claude-code
     git
     ghq
     tree
