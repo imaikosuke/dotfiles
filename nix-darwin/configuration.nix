@@ -1,5 +1,6 @@
 {
   self,
+  pkgs,
   username,
   system,
   ...
@@ -12,6 +13,9 @@
   ];
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = system;
+  fonts.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
   system.stateVersion = 6;
   nix.enable = false;
   security.pam.services.sudo_local.touchIdAuth = true;
