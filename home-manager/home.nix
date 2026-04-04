@@ -11,6 +11,10 @@
   # Do not change this value after initial setup.
   home.stateVersion = "25.11";
 
+  home.sessionPath = [
+    "/Applications/Cursor.app/Contents/Resources/app/bin"
+  ];
+
   # CLI tools managed by Nix.
   home.packages = with pkgs; [
     bat
