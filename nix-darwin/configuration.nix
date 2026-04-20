@@ -59,7 +59,7 @@
 
     CustomUserPreferences = {
       NSGlobalDomain = {
-        TISRomanSwitchState = 1;
+        TISRomanSwitchState = 0;
       };
     };
   };
