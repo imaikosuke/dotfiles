@@ -42,6 +42,11 @@
       enable = true;
       enableCompletion = true;
       autosuggestion.enable = true;
+      envExtra = ''
+        if [[ -n "$CURSOR_AGENT" || -n "$VSCODE_INJECTION" ]]; then
+          eval "$(mise activate zsh --shims)"
+        fi
+      '';
       initContent = ''
         source ~/.config/zsh/.zshrc
       '';
