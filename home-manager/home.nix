@@ -20,6 +20,7 @@
     bat
     claude-code
     git
+    gh
     ghq
     tree
     zsh-completions
